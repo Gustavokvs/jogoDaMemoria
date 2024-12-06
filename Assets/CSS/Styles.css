@@ -1,0 +1,25 @@
+#cabecalho {
+    margin-left: 3em;
+    margin-top: 2.4em;
+    padding: 1em;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+#cabecalho h1 {
+    font-size: 3em;
+}
+
+#cabecalho ul {
+    margin-right: 2em;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#cabecalho li {
+    display: flex;
+    font-size: 1.5em;
+}
