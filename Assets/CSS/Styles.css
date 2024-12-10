@@ -1,16 +1,21 @@
 #cabecalho {
     margin: auto;
-    background-color: red;
     height: 6em;
     align-items: center;
     padding: 1em;
+    color: orange;
     display: flex;
+    font-weight: bold;
     align-content: center;
     justify-content: space-between;
+    background-image: url(/Assets/IMG/caixa.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 }
 
 #nome {
-     margin-left: 1.2em;
+    margin-left: 1.2em;
     font-size: 3em;
 }
 
@@ -20,9 +25,25 @@
     gap: 1em;
     align-items: center;
     justify-content: space-around;
+    font-size: 1.4em;
+    font-weight: bold;
 }
 
 #cabecalho li {
     display: flex;
     font-size: 1.5em;
+}
+
+
+#inicio h2 {
+    display: flex;
+    margin: 5em auto;
+    width: 55%;
+    font-size: 1.4em;
+    text-align: center;
+    padding: 1em;
+    color: orange;
+    font-weight: bold;
+    align-content: center;
+    justify-content: center;
 }
