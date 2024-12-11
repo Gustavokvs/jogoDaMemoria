@@ -1,3 +1,15 @@
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/Assets/IMG/tema.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -7,10 +19,10 @@
     margin: auto;
 }
 
-.cartas {
+.card {
     aspect-ratio: 3/4;
     width: 100%;
-    background-color: black;
+    
     position: relative;
     transition: all 400ms ease;
     transform-style: preserve-3d;
@@ -22,19 +34,29 @@
     position: absolute;
     background-size: cover;
     background-position: center;
+    transition: all 2s ease;
 
 }
 
 .front {
-    background-image: url("/Assets/IMG/mario.png");
+
     transform: rotateY(180deg);
 }
 
 .back {
     background-image: url("/Assets/IMG/misterio.png");
+    background-size: cover;
+    width: 100%;
+    height: 100%;
     backface-visibility: hidden;
 }
 
-.cartas:hover{
+.reveal-card {
+
     transform: rotateY(180deg);
+
+}
+.disable-card {
+    filter: saturate(0);
+    opacity: 0.5;
 }
