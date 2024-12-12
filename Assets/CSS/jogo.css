@@ -1,5 +1,8 @@
 main {
     display: flex;
+    margin: auto;
+    padding-top: 2em;
+    padding-bottom: 2em;
     flex-direction: column;
     width: 100%;
     align-items: center;
@@ -9,6 +12,20 @@ main {
     background-position: center;
     background-repeat: no-repeat;
 }
+
+
+.tempo {
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    background-color: rgb(242, 242, 242);
+    font-weight: bold;
+    min-width: 800px;
+    max-width: 800px;
+
+}
+
 
 .grid {
     display: grid;
@@ -22,7 +39,7 @@ main {
 .card {
     aspect-ratio: 3/4;
     width: 100%;
-    
+
     position: relative;
     transition: all 400ms ease;
     transform-style: preserve-3d;
@@ -56,6 +73,7 @@ main {
     transform: rotateY(180deg);
 
 }
+
 .disable-card {
     filter: saturate(0);
     opacity: 0.5;
