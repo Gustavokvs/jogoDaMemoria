@@ -19,10 +19,13 @@ main {
     align-items: center;
     justify-items: center;
     justify-content: space-between;
-    background-color: rgb(242, 242, 242);
+    background-color: rgb(255, 255, 255, 0.8);
     font-weight: bold;
-    min-width: 800px;
+    font-size: 1.2em;
+    min-width: 764px;
     max-width: 800px;
+    margin: 0.5em;
+    padding: 1.2em;
 
 }
 
@@ -39,6 +42,7 @@ main {
 .card {
     aspect-ratio: 3/4;
     width: 100%;
+    background-color: white;
 
     position: relative;
     transition: all 400ms ease;
