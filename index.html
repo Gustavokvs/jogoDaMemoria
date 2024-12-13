@@ -1,62 +1,24 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Assets/CSS/reset.css">
-    <link rel="stylesheet" href="Assets/CSS/Styles.css">
-    <title>Jogo</title>
-
+    <script defer src="./Assets/JS/login.js"> </script>
+    <title>JOGO DA MEMÓRIA</title>
 </head>
 
 <body>
-    <header>
-
-        <div id="cabecalho">
-            <div id="nome">
-                <h1>JOGO DA MEMÓRIA</h1>
-            </div>
-
-            <div id="hud">
-                <ul>
-
-                    <li>
-                        <a href="index.html">Início</a>
-                    </li>
-                    <li>
-                        <a href="sobre.html">Sobre</a>
-                    </li>
-                    <li>
-                        <a href="regras.html">Regras</a>
-                    </li>
-                    <li>
-                        <a href="desenvolvedores.html">Desenvolvedores</a>
-                    </li>
-
-                </ul>
-            </div>
-
+    <form class="login-form">
+        <div class="login">
+            <img src="Assets/IMG/login.png" alt="">
+            <h1> Diga seu nome</h1>
+            <p>Você precisa informar para jogar.</p>
         </div>
-    </header>
-
-    <section id="inicio">
-
-        <h2>QUE TAL COMPETIR COM SEUS AMIGOS PRA VER QUEM TEM A MELHOR MEMÓRIA?
-            <BR>VENHA SE DIVERTIR NESSE JOGO CLÁSSICO DE MEMÓRIA
-            COMO O TABULEIRO
-            DE ANTIGAMENTE <br>
-            FAÇA COMPETIÇÕES TENTANDO FICAR NO RANKING MAIS
-            ALTO PRA PROVAR QUE VOCÊ PODE SE LEMBRAR DO ANIVERSÁRIO DELES HAHAHA</BR>
-        </h2>
-        <br>
-        <nav id="botaoIniciar">
-            
-            <a href="jogoFacil.html">COLOCAR BOTÃO</a>
-
-        </nav>
-
-    </section>
+        <input type="text" placeholder="Nome" class="login__input">
+        <button type="submit" class="login__button" disabled>JOGAR</button>
+    </form>
 </body>
 
 </html>
