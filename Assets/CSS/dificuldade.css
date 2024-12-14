@@ -1,0 +1,43 @@
+body {
+    height: 100vh;
+    background-image: url('/Assets/IMG/backgroundDificuldade.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.botoes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16em;
+    gap: 3em;
+
+}
+
+.botoes a input {
+    background-color: rgb(252, 252, 111);
+    font-size: 4em;
+    border: 0.1em solid black;
+    border-radius: 0.2em;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.botao_facil input:hover {
+    transition: 2s;
+    background-color: rgb(43, 233, 43);
+
+}
+
+.botao_medio input:hover {
+    transition: 2s;
+    background-color: orange;
+
+}
+
+.botao_dificil input:hover {
+    transition: 1s;
+    background-color: red;
+
+}

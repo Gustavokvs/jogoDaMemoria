@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Assets/CSS/reset.css">
+    <link rel="stylesheet" href="Assets/CSS/login.css">
     <script defer src="./Assets/JS/login.js"> </script>
     <title>JOGO DA MEMÓRIA</title>
 </head>
@@ -15,9 +16,11 @@
             <img src="Assets/IMG/login.png" alt="">
             <h1> Diga seu nome</h1>
             <p>Você precisa informar para jogar.</p>
+            <div class="dadosEBotao">
+                <input type="text" placeholder="Nome" class="login__input">
+                <button type="submit" class="login__button" disabled>JOGAR</button>
+            </div>
         </div>
-        <input type="text" placeholder="Nome" class="login__input">
-        <button type="submit" class="login__button" disabled>JOGAR</button>
     </form>
 </body>
 

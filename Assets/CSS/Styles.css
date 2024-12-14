@@ -1,9 +1,18 @@
+body {
+    height: 100vh;
+    background-image: url('/Assets/IMG/backgroundInicio.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
 #cabecalho {
     margin: auto;
     height: 6em;
     align-items: center;
     padding: 1em;
-    color: orange;
+    color: rgb(255, 119, 0);
     display: flex;
     font-weight: bold;
     align-content: center;
@@ -14,18 +23,21 @@
     background-position: center;
 }
 
-#nome {
-    margin-left: 1.2em;
-    font-size: 3em;
+#cabecalho a {
+    text-decoration: none;
+    color: rgb(255, 119, 0);
 }
+
 
 #cabecalho ul {
     margin-right: 2em;
     display: flex;
-    gap: 1em;
+    text-decoration: solid;
+    gap: 0.7em;
     align-items: center;
     justify-content: space-around;
-    font-size: 1.4em;
+    font-size: 1em;
+    text-transform: uppercase;
     font-weight: bold;
 }
 
@@ -34,16 +46,42 @@
     font-size: 1.5em;
 }
 
+#nome {
+    margin-left: 1.2em;
+    font-size: 3em;
+}
+
+#inicio {
+margin-left: 16em;
+margin-right: 16em;
+
+}
 
 #inicio h2 {
+    background-color: rgba(255, 255, 255, 0.8);
     display: flex;
     margin: 5em auto;
     width: 55%;
     font-size: 1.4em;
     text-align: center;
     padding: 1em;
-    color: orange;
+    color:  rgb(255, 119, 0);
     font-weight: bold;
     align-content: center;
     justify-content: center;
+}
+
+#botao_jogar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none
+}
+
+#botao_jogar input.botao_jogar {
+    font-size: 2em;
+    background-color: orange;
+    border-radius: 0.4em;
+    cursor: pointer;
+    /* faz q p mouse tenha efeito*/
 }
