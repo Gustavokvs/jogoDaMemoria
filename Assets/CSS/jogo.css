@@ -7,7 +7,7 @@ main {
     width: 100%;
     align-items: center;
     justify-content: center;
-    background-image: url('/Assets/IMG/tema.png');
+    background-image: url('./Assets/IMG/tema.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -65,7 +65,7 @@ main {
 }
 
 .back {
-    background-image: url("/Assets/IMG/misterio.png");
+    background-image: url("./Assets/IMG/misterio.png");
     background-size: cover;
     width: 100%;
     height: 100%;
