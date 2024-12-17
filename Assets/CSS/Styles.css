@@ -1,10 +1,11 @@
-body {
-    height: 100vh;
+main {
+    width: 100%, ;
+    height: 100%;
     background-image: url('/Assets/IMG/backgroundInicio.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
+    padding: 2em;
 }
 
 #cabecalho {
@@ -52,8 +53,8 @@ body {
 }
 
 #inicio {
-margin-left: 16em;
-margin-right: 16em;
+    margin-left: 16em;
+    margin-right: 16em;
 
 }
 
@@ -65,11 +66,117 @@ margin-right: 16em;
     font-size: 1.4em;
     text-align: center;
     padding: 1em;
-    color:  rgb(255, 119, 0);
+    color: rgb(255, 119, 0);
     font-weight: bold;
     align-content: center;
     justify-content: center;
 }
+
+
+.sobre {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.78);
+    margin-left: 20em;
+    margin-right: 20em;
+    text-align: center;
+    gap: 0.5em;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+.sobre h2 {
+    color: rgb(255, 119, 0);
+    width: 55%;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.sobre h3 {
+    margin-top: 2em;
+    padding: 1em;
+    width: 80%;
+    color: rgb(255, 119, 0);
+    font-size: 1.5em;
+
+}
+
+.desenvolvedores {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.78);
+    margin-left: 20em;
+    margin-right: 20em;
+    text-align: center;
+    gap: 0.5em;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0;
+
+}
+
+.desenvolvedores h2 {
+    color: rgb(255, 119, 0);
+    width: 55%;
+    padding: 1em;
+    font-weight: bold;
+    font-size: 1.6em;
+}
+
+.desenvolvedores h3 {
+    color: rgb(255, 119, 0);
+    width: 55%;
+    padding: 1em;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.devs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+.devs ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.devs .devs-item {
+    display: flex;
+    align-items: center;
+    /* Alinha a imagem e o texto verticalmente */
+    gap: 1em;
+    /* Espaço entre a imagem e o texto */
+    margin-bottom: 1em;
+    /* Espaço entre os itens da lista */
+}
+
+.devs li img {
+    width: 16%;
+    /* Defina o tamanho da imagem */
+    border-radius: 50%;
+    /* Torna a imagem redonda */
+}
+
+.devs li a {
+    font-size: 1.2em;
+    color: rgb(255, 119, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
 
 #botao_jogar {
     display: flex;

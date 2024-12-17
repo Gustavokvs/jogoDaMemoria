@@ -8,44 +8,43 @@
     <link rel="stylesheet" href="Assets/CSS/Styles.css">
     <link rel="stylesheet" href="Assets/CSS/jogo.css">
     <script defer src="/Assets/JS/jogoFacil.js"></script>
+  
     <title>Jogo da memória</title>
 
 
 </head>
 
+<header>
+
+    <div id="cabecalho">
+        <div id="nome">
+            <h1>JOGO DA MEMÓRIA</h1>
+        </div>
+
+        <div id="hud">
+            <ul>
+
+                <li>
+                    <a href="inicio.html">Início</a>
+                </li>
+                <li>
+                    <a href="sobre.html">Sobre</a>
+                </li>
+                <li>
+                    <a href="desenvolvedores.html">Desenvolvedores</a>
+                </li>
+
+            </ul>
+        </div>
+
+
+    </div>
+</header>
+
 <body>
 
 
 
-    <header>
-
-        <div id="cabecalho">
-            <div id="nome">
-                <h1>JOGO DA MEMÓRIA</h1>
-            </div>
-
-            <div id="hud">
-                <ul>
-
-                    <li>
-                        <a href="inicio.html">Início</a>
-                    </li>
-                    <li>
-                        <a href="sobre.html">Sobre</a>
-                    </li>
-                    <li>
-                        <a href="regras.html">Regras</a>
-                    </li>
-                    <li>
-                        <a href="desenvolvedores.html">Desenvolvedores</a>
-                    </li>
-
-                </ul>
-            </div>
-
-
-        </div>
-    </header>
 
     <main>
         <div class="tempo">
@@ -56,6 +55,10 @@
         </div>
         <div class="grid">
         </div>
+    </main>
+    <main>
+        <div id="pontuacao">Pontuação: 0</div>
+        <script src="/Assets/JS/pontuacao.js"></script> 
     </main>
 </body>
 

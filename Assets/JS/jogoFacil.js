@@ -2,6 +2,8 @@ const grid = document.querySelector('.grid');
 const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
 
+
+
 const personagens = [
     'mario',
     'peach',
@@ -144,3 +146,4 @@ const startGame = () => {
 
 // Inicia o jogo quando a página é carregada
 window.onload = startGame;
+

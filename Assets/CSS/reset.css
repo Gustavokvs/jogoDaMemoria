@@ -1,48 +1,127 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* Reset geral para todos os navegadores */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 100%;
+}
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+/* Garantir que o html e o body ocuparam 100% da altura da tela */
+html, body {
+    height: 100%;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+
+/* Evitar que o texto seja quebrado nas palavras */
 body {
-	line-height: 1;
+    line-height: 1.4;
 }
+
+/* Reset de listas */
 ol, ul {
-	list-style: none;
+    list-style: none;
 }
+
+/* Reset de tabelas */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Reset de links */
+a {
+    text-decoration: none;
+    color: inherit;  /* herda a cor do elemento pai */
+}
+
+/* Reset de formulários */
+input, button, textarea, select {
+    border: none;
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+}
+
+/* Para elementos do tipo block, garantir que tenham o comportamento padrão */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+/* Reset de cabeçalhos */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Remover as bordas e o estilo de input no foco */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+}
+
+/* Remover o estilo de campo de seleção */
+textarea {
+    resize: vertical;
+}
+
+/* Remover quebras de linha nos blocos de citações */
 blockquote, q {
-	quotes: none;
+    quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+    content: '';
+    content: none;
 }
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+
+/* Especificar um estilo genérico para imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Acentuação em elementos inline, como <strong>, <em> */
+b, strong {
+    font-weight: bold;
+}
+
+i, em {
+    font-style: italic;
+}
+
+/* Remover o comportamento de sublinhado em links */
+a:hover, a:focus {
+    text-decoration: none;
+}
+
+/* Remover o estilo de borda de campo de formulário em foco */
+input:focus, textarea:focus {
+    outline: none;
+}
+
+/* Garantir a visibilidade de campos de input no estado "ativo" */
+input, textarea, select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Definir fontes para todos os elementos de texto */
+html {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Definir comportamento padrão para botões */
+button, input[type="button"], input[type="submit"], input[type="reset"] {
+    cursor: pointer;
+}
+
+/* Para garantir que o campo de texto não tenha altura extra */
+textarea {
+    resize: none;
 }
