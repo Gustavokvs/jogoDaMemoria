@@ -1,6 +1,6 @@
 main {
     height: 100%;
-    background-image: url('./Assets/IMG/backgroundDificuldade.png');
+    background-image: url('../IMG/backgroundDificuldade.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
