@@ -83,3 +83,57 @@ main {
     filter: saturate(0);
     opacity: 0.5;
 }
+
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .tempo {
+        font-size: 1em;
+    }
+}
+
+/* Para tablets e telas médias, reduz o número de colunas e ajusta os tamanhos dos itens */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .tempo {
+        font-size: 0.9em;
+        min-width: 100%;
+    }
+}
+
+/* Para telas pequenas, como celulares, ajusta para 2 colunas */
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tempo {
+        font-size: 0.8em;
+        min-width: 100%;
+    }
+
+    .card {
+        aspect-ratio: 1/1;
+        /* Ajusta o aspecto do card para se adaptar a telas pequenas */
+    }
+}
+
+/* Para telas muito pequenas, como dispositivos com menos de 320px de largura */
+@media (max-width: 314px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tempo {
+        font-size: 0.7em;
+    }
+
+    .card {
+        aspect-ratio: 1/1;
+    }
+}

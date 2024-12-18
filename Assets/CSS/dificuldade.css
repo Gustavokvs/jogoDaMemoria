@@ -41,3 +41,54 @@ main {
     background-color: red;
 
 }
+
+@media (max-width: 1200px) {
+    .botoes {
+        gap: 2em;
+    }
+
+    .botoes a input {
+        font-size: 3em;  /* Reduz o tamanho da fonte para telas menores */
+        width: 180px;    /* Reduz a largura dos botões */
+    }
+}
+
+/* Para tablets e telas médias (até 768px), ajusta os botões para uma disposição mais compacta */
+@media (max-width: 768px) {
+    .botoes {
+        flex-direction: column;  /* Empilha os botões */
+        margin-top: 10em;
+        gap: 1.5em;
+    }
+
+    .botoes a input {
+        font-size: 2.5em;  /* Diminui ainda mais o tamanho dos botões */
+        width: 250px;     /* Ajusta a largura dos botões */
+    }
+}
+
+/* Para telas pequenas (até 480px), ajusta a disposição dos botões */
+@media (max-width: 480px) {
+    .botoes {
+        margin-top: 6em;  /* Diminui o espaçamento superior */
+        gap: 1em;
+    }
+
+    .botoes a input {
+        font-size: 2em;   /* Reduz ainda mais o tamanho da fonte */
+        width: 200px;     /* Mantém uma largura razoável */
+    }
+}
+
+/* Para telas muito pequenas, como dispositivos com menos de 320px de largura */
+@media (max-width: 314px) {
+    .botoes {
+        margin-top: 4em;  /* Ajusta o espaçamento superior */
+        gap: 0.5em;
+    }
+
+    .botoes a input {
+        font-size: 1.8em;  /* Ajusta o tamanho da fonte */
+        width: 180px;      /* Ajusta a largura do botão */
+    }
+}

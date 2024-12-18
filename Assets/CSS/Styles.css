@@ -3,6 +3,7 @@ main {
     background-image: url('../IMG/backgroundInicio.png');
     background-size: cover;
     background-position: center;
+    overflow: hidden;
     background-repeat: no-repeat;
     padding: 2em;
 }
@@ -17,7 +18,7 @@ main {
     font-weight: bold;
     align-content: center;
     justify-content: space-between;
-    background-image: url('../IMG/caixa.jpg');
+    background-image: url('../IMG/banner6.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -137,49 +138,62 @@ main {
     font-size: 1.2em;
 }
 
+
+
 .devs {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.5);
-
+    /* Centraliza a lista horizontalmente */
+    justify-content: flex-start;
+    /* Alinha a lista no topo do contêiner */
+    width: 100%;
+    /* O contêiner ocupará 100% da largura */
+    margin-top: 3em;
+    /* Adiciona um espaço para separar o texto da lista */
+    gap: 2em;
+    /* Espaço entre a lista e o texto */
 }
 
 .devs ul {
     list-style-type: none;
-    padding: 0;
-    margin: 0;
+    width: 26%;
+    /* A largura da lista, ajustada para ser igual ao texto acima */
+    background-color: rgba(255, 255, 255, 0.78);
+    padding-bottom: 2em;
+    margin-bottom: 2em;
 }
 
 .devs .devs-item {
     display: flex;
+    justify-content: start;
+    /* Centraliza os itens horizontalmente */
     align-items: center;
-    /* Alinha a imagem e o texto verticalmente */
+    /* Centraliza os itens verticalmente */
     gap: 1em;
     /* Espaço entre a imagem e o texto */
     margin-bottom: 1em;
-    /* Espaço entre os itens da lista */
+    /* Espaço entre os itens */
 }
 
 .devs li img {
-    width: 12%;
-    /* Defina o tamanho da imagem */
+    width: 16%;
+    /* Ajuste o tamanho das imagens */
     border-radius: 50%;
     /* Torna a imagem redonda */
 }
 
 .devs li a {
-    font-size: 1.2em;
-    color: rgb(255, 119, 0);
-    text-decoration: none;
+    font-size: 1.8em;
     font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
 }
-
-
 
 #botao_jogar {
     display: flex;
     justify-content: center;
+    margin-top: 0;
     align-items: center;
     text-decoration: none
 }
@@ -190,4 +204,164 @@ main {
     border-radius: 0.4em;
     cursor: pointer;
     /* faz q p mouse tenha efeito*/
+}
+
+.ranking {
+    background: rgba(241, 149, 1, 0.7);
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.997);
+
+}
+
+#ranking-list {
+    margin-bottom: 20px;
+}
+
+.rank-item {
+    font-size: 1.2rem;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #f39c12;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e67e22;
+}
+
+.score {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.ranking-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 128vh;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    #cabecalho {
+        flex-direction: column;
+        height: auto;
+        padding: 2em;
+    }
+
+    #cabecalho ul {
+        flex-direction: column;
+        gap: 1em;
+        margin-right: 0;
+    }
+
+    #inicio, .sobre, .desenvolvedores {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .sobre h2, .desenvolvedores h2 {
+        font-size: 1.5em;
+    }
+
+    #inicio h2 {
+        width: 80%;
+        font-size: 1.2em;
+    }
+
+    .devis ul {
+        width: 80%;
+    }
+
+    .devs li img {
+        width: 25%;
+    }
+
+    #ranking-list {
+        font-size: 1.2rem;
+    }
+
+    .score {
+        font-size: 18px;
+    }
+
+    .ranking-container {
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #cabecalho {
+        padding: 1em;
+    }
+
+    #nome {
+        font-size: 2.5em;
+    }
+
+    #inicio h2 {
+        font-size: 1em;
+        width: 90%;
+    }
+
+    .sobre h2, .desenvolvedores h2 {
+        font-size: 1.2em;
+    }
+
+    .devs li img {
+        width: 30%;
+    }
+
+    .ranking {
+        padding: 20px;
+        max-width: 90%;
+    }
+
+    .ranking-container {
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    #nome {
+        font-size: 2em;
+    }
+
+    #inicio h2 {
+        font-size: 1em;
+        width: 100%;
+    }
+
+    .sobre h2, .desenvolvedores h2 {
+        font-size: 1.2em;
+    }
+
+    .devs li img {
+        width: 35%;
+    }
+
+    .devs ul {
+        width: 100%;
+    }
+
+    .ranking {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .ranking-container {
+        height: auto;
+    }
 }

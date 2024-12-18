@@ -1,6 +1,8 @@
 const grid = document.querySelector('.grid');
 const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
+const scoreDisplay = document.querySelector('.score'); // Elemento onde a pontuação será exibida
+
 
 const personagens = [
     'mario',
@@ -16,6 +18,8 @@ const personagens = [
 let primeiraCarta = '';
 let segundaCarta = '';
 let loop; // Variável para armazenar o setInterval
+let score = 0; // Variável para armazenar a pontuação
+
 
 // Função para criar elementos
 const createElement = (tag, className) => {
@@ -33,15 +37,16 @@ const checkEndGame = () => {
         setTimeout(() => {
             alert('Sinto muito, mas vc tem uma memória de peixe.');
             stopTimer(); // Para o tempo
+            saveScore(); // Salva a pontuação
         }, 1000)
         setTimeout(() => {
             window.location.href = 'inicio.html'; // Redireciona para a página inicial
         }, 4000)
     } else if (disableCards.length == 16) {
         setTimeout(() => {
-
             alert(`Parabéns, ${spanPlayer.innerHTML} você conseguiria se lembrar do aniversário do seu cachorro kkkkk`);
             stopTimer(); // Para o tempo
+            saveScore(); // Salva a pontuação
         }, 1000)
         setTimeout(() => {
             window.location.href = 'inicio.html'; // Redireciona para a página inicial
@@ -60,6 +65,8 @@ const checarCarta = () => {
         segundaCarta.firstChild.classList.add('disable-card');
         primeiraCarta = '';
         segundaCarta = '';
+        score += 10; // Aumenta a pontuação quando as cartas combinam
+        updateScore(); // Atualiza a exibição da pontuação
         checkEndGame(); // Verifica se o jogo acabou
     } else {
         setTimeout(() => {
@@ -132,11 +139,36 @@ const stopTimer = () => {
     clearInterval(loop); // Para o intervalo
 }
 
+// Função para atualizar a exibição da pontuação
+const updateScore = () => {
+    scoreDisplay.innerHTML = `Pontuação: ${score}`; // Atualiza a pontuação na tela
+}
+
+// Função para salvar a pontuação no localStorage e redirecionar para o ranking
+const saveScore = () => {
+    const playerName = localStorage.getItem('player');
+    const newScore = { name: playerName, score: score };
+
+    let ranking = JSON.parse(localStorage.getItem('ranking')) || [];
+
+    ranking.push(newScore);
+    ranking.sort((a, b) => b.score - a.score); // Ordena pelo maior score
+
+    localStorage.setItem('ranking', JSON.stringify(ranking));
+
+    // Redireciona para a página de ranking
+    window.location.href = 'ranking.html';
+}
+
 // Função para iniciar o jogo
 const startGame = () => {
     // Exibe o nome do jogador
     const playerName = localStorage.getItem('player');
     spanPlayer.innerHTML = playerName;
+
+    // Inicia a pontuação
+    score = 0; // Reinicia a pontuação ao iniciar o jogo
+    updateScore(); // Exibe a pontuação inicial
 
     // Inicia o jogo
     startTimer();

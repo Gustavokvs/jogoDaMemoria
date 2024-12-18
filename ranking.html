@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/CSS/reset.css">
+    <link rel="stylesheet" href="./Assets/CSS/Styles.css">
+    <title>Jogo</title>
+
+</head>
+
+<header>
+
+    <div id="cabecalho">
+        <div id="nome">
+            <h1>JOGO DA MEMÓRIA</h1>
+        </div>
+
+        <div id="hud">
+            <ul>
+
+                <li>
+                    <a href="./inicio.html">Início</a>
+                </li>
+                <li>
+                    <a href="./sobre.html">Sobre</a>
+                </li>
+                <li>
+                    <a href="./desenvolvedores.html">Desenvolvedores</a>
+                </li>
+
+            </ul>
+        </div>
+
+    </div>
+</header>
+
+<body id="ranking-page">
+    <div class="ranking-container">
+    <div class="ranking">
+        <h2>Ranking</h2>
+        <div id="ranking-list">
+    </div>
+        <button onclick="window.location.href='index.html'">Voltar ao Jogo</button>
+    </div>
+</div>
+    <script>
+        // Função para exibir o ranking
+        const displayRanking = () => {
+            const rankingList = document.getElementById('ranking-list');
+            const ranking = JSON.parse(localStorage.getItem('ranking')) || [];
+    
+            if (ranking.length === 0) {
+                rankingList.innerHTML = '<p>Nenhum jogador ainda.</p>';
+                return;
+            }
+    
+            ranking.forEach((entry, index) => {
+                const rankItem = document.createElement('div');
+                rankItem.classList.add('rank-item');
+                rankItem.innerHTML = `${index + 1}. ${entry.name} - ${entry.score} pontos`;
+                rankingList.appendChild(rankItem);
+            });
+        }
+    
+        // Exibir o ranking assim que a página carregar
+        window.onload = displayRanking;
+    </script>
+
+</body>
+
+
+
+
+</html>
